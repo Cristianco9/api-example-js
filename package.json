@@ -1,0 +1,31 @@
+{
+  "name": "api-example",
+  "version": "0.0.1",
+  "description": "first API development with Node.js",
+  "keywords": [
+    "Node.js",
+    "JavaScript",
+    "API",
+    "express.js"
+  ],
+  "homepage": "https://github.com/Cristianco9/api-example-js#readme",
+  "bugs": {
+    "url": "https://github.com/Cristianco9/api-example-js/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cristianco9/api-example-js.git"
+  },
+  "license": "MIT",
+  "author": "Cristianco9 <cristian_cortes_ortiz@hotmail.com>",
+  "type": "module",
+  "main": "src/app.js",
+  "scripts": {
+    "dev": "nodemon src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "morgan": "^1.10.0"
+  }
+}
