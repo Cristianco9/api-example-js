@@ -23,6 +23,38 @@ class Customer {
         const result = await this.allCustomers;
         return result;
     }
+
+    async getOne(userID) {
+        const result = await this.allCustomers[0];
+        return result;
+    }
+
+    async deleteOne(userID) {
+        const result = await this.allCustomers[1];
+        return result;
+    }
+
+    async updateOne(userID, newCustomerData) {
+        const result = await this.allCustomers[0];
+        return result;
+    }
+
+    async createOne(newCustomer) {
+        this.allCustomers.push(newCustomer);
+        const result = this.allCustomers[this.allCustomers.length - 1];
+        return result;
+    }
+
+    async login(userName, password) {
+        const result = 
+        {
+            customer: userName,
+            loginStatus: true,
+            token: "012323jdgshds7sfdhdsjs"
+        };
+        return result;
+    }
+
 }
 
 export default new Customer();

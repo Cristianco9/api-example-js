@@ -1,17 +1,20 @@
 // Import the Customers services
 import Customers from "../../services/Customers.js";
 
-export const getAllCustomers = async (req, res, next) => {
-
+export const loginCustomer = async (req, res, next) => {
     try {
-        const customers = await Customers.getAll();
+
+        const { userName, password } = req.body.credencials;
+
+        const customer = await Customers.login(userName, password);
         res.status(200).json(
             {
                 success: true,
-                message: "Customers retrieved successfully",
-                data: customers
+                message: "Customer logged successfully",
+                data: customer
             }
-        );
+        )
+
     } catch (err) {
         res.status(500).json(
             {
@@ -21,5 +24,4 @@ export const getAllCustomers = async (req, res, next) => {
             }
         )
     }
-
-};
+}
