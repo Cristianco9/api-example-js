@@ -3,7 +3,7 @@ import Customers from "../../services/Customers.js";
 
 export const deleteOneCustomer = async (req, res, next) => {
     try {
-        const { customerID } = req.body;
+        const customerID = req.body;
         const customer = await Customers.deleteOne(customerID);
         res.status(200).json(
             {

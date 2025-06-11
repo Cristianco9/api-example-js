@@ -3,7 +3,8 @@ import Customers from "../../services/Customers.js";
 
 export const updateOneCustomer = async (req, res, next) => {
     try {
-        const { customerID, newCustomerData } = req.body;
+        const customerID = req.body;
+        const newCustomerData = req.body;
         const customer = await Customers.updateOne(customerID, newCustomerData);
         res.status(201).json(
             {

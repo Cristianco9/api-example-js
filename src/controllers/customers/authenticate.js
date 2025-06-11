@@ -4,9 +4,10 @@ import Customers from "../../services/Customers.js";
 export const loginCustomer = async (req, res, next) => {
     try {
 
-        const { userName, password } = req.body.credencials;
+        const username = req.body;
+        const password = req.body;
 
-        const customer = await Customers.login(userName, password);
+        const customer = await Customers.login(username, password);
         res.status(200).json(
             {
                 success: true,
@@ -16,6 +17,8 @@ export const loginCustomer = async (req, res, next) => {
         )
 
     } catch (err) {
+        console.log(err);
+        
         res.status(500).json(
             {
                 success: false,
